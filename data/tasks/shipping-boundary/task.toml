@@ -1,0 +1,7 @@
+slice = "fix"
+request = "The checkout tests fail. Find out why and fix it."
+
+[[break]]
+file = "src/shop/shipping.py"
+old = "if weight_grams <= limit:"
+new = "if weight_grams < limit:"

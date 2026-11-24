@@ -1,0 +1,9 @@
+slice = "feature"
+request = "Marketing has a new discount code, SPRING20, for 20% off. Add it."
+regenerate = true
+
+# A reference solution, used only by check_suite.py to show the task can be passed.
+[[solution]]
+file = "data/codes.csv"
+old = "FRIENDS15,15\n"
+new = "FRIENDS15,15\nSPRING20,20\n"

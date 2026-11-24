@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.pytest_cache/
+# made by runs
+work/
+results/
+data/wire/

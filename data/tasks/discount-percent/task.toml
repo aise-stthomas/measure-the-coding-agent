@@ -1,0 +1,7 @@
+slice = "fix"
+request = "The checkout tests fail. Find out why and fix it."
+
+[[break]]
+file = "src/shop/discounts.py"
+old = "return round_half_up(subtotal(items) * percent_for(code) / 100)"
+new = "return percent_for(code)"

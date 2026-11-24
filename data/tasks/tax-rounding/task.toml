@@ -1,0 +1,7 @@
+slice = "fix"
+request = "The checkout tests fail. Find out why and fix it."
+
+[[break]]
+file = "src/shop/cart.py"
+old = "return round_half_up(subtotal(items) * TAX_RATE)"
+new = "return subtotal(items) * TAX_RATE"

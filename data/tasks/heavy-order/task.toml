@@ -1,0 +1,7 @@
+slice = "report"
+request = "A customer ordered three 400 g cups and was charged the shipping rate for a parcel under 1 kg. Fix it."
+
+[[break]]
+file = "src/shop/cart.py"
+old = "return sum(i.weight_grams * i.qty for i in items)"
+new = "return sum(i.weight_grams for i in items)"

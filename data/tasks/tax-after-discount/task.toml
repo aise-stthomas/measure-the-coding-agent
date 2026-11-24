@@ -1,0 +1,7 @@
+slice = "report"
+request = "Tax is being charged on the full price even when a discount code is used. Tax is on the price after the discount. Fix it."
+
+[[break]]
+file = "src/shop/checkout.py"
+old = "tax = round_half_up(after * TAX_RATE)"
+new = "tax = round_half_up(sub * TAX_RATE)"

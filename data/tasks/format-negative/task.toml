@@ -1,0 +1,9 @@
+slice = "fix"
+request = "The checkout tests fail. Find out why and fix it."
+
+[[break]]
+file = "src/shop/money.py"
+old = '''    sign = "-" if cents < 0 else ""
+    cents = abs(cents)
+    return f"{sign}${cents // 100}.{cents % 100:02d}"'''
+new = '''    return f"${cents / 100:.2f}"'''

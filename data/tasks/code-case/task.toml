@@ -1,0 +1,7 @@
+slice = "report"
+request = "Customers who type their discount code in lower case, like welcome10, get an error at checkout. Fix it."
+
+[[break]]
+file = "src/shop/discounts.py"
+old = "key = code.strip().upper()"
+new = "key = code"

@@ -1,0 +1,12 @@
+slice = "feature"
+request = "Add bulk_discount(items) to src/shop/cart.py. It returns the discount in cents: 5% off the price of every line whose qty is 10 or more, rounded half up to a whole cent over the whole cart."
+
+# A reference solution, used only by check_suite.py to show the task can be passed.
+[[solution]]
+file = "src/shop/cart.py"
+old = "def total(items):"
+new = '''def bulk_discount(items):
+    return round_half_up(sum(i.price_cents * i.qty * 0.05 for i in items if i.qty >= 10))
+
+
+def total(items):'''

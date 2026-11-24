@@ -1,0 +1,7 @@
+slice = "report"
+request = "An order of exactly $50.00 was charged shipping. Orders of $50.00 or more ship free. Fix it."
+
+[[break]]
+file = "src/shop/shipping.py"
+old = "if subtotal_cents >= FREE_FROM_CENTS:"
+new = "if subtotal_cents > FREE_FROM_CENTS:"

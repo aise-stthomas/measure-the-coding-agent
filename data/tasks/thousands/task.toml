@@ -1,0 +1,8 @@
+slice = "feature"
+request = "Show amounts of $1,000.00 or more with commas: format_cents(123456) should be \"$1,234.56\"."
+
+# A reference solution, used only by check_suite.py to show the task can be passed.
+[[solution]]
+file = "src/shop/money.py"
+old = 'return f"{sign}${cents // 100}.{cents % 100:02d}"'
+new = 'return f"{sign}${cents // 100:,}.{cents % 100:02d}"'

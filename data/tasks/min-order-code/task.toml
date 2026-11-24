@@ -1,0 +1,23 @@
+slice = "feature"
+request = "Add a discount code BIG25: 25% off, for subtotals of $100.00 or more. Below $100.00 the code is refused with a ValueError, as an unknown code is."
+regenerate = true
+
+# A reference solution, used only by check_suite.py to show the task can be passed.
+[[solution]]
+file = "data/codes.csv"
+old = "FRIENDS15,15\n"
+new = "FRIENDS15,15\nBIG25,25\n"
+
+[[solution]]
+file = "src/shop/discounts.py"
+old = '''def apply_code(items, code):
+    """The discount in cents for this cart and code."""
+'''
+new = '''MINIMUM_CENTS = {"BIG25": 10000}
+
+
+def apply_code(items, code):
+    """The discount in cents for this cart and code."""
+    if subtotal(items) < MINIMUM_CENTS.get(code.strip().upper(), 0):
+        raise ValueError(f"{code} needs a subtotal of at least $100.00")
+'''

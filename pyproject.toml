@@ -1,0 +1,12 @@
+[project]
+name = "measure-the-coding-agent"
+version = "0.1.0"
+description = "AI Systems Engineering lab: measure a coding agent with a task suite scored from the state each run leaves behind."
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.0",
+    "pytest>=8.0",
+]
+
+[tool.uv]
+package = false
